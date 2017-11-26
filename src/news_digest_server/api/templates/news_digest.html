@@ -1,0 +1,18 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Дайджест новостей c сайта lenta.ru</title>
+    </head>
+    <body>
+        <h3>Дайджест новостей c сайта lenta.ru</h3>
+        {% for news in news_list %}
+        <div>
+            <h4>{{news.title}}</h4>
+            <div>Дата: {{news.pub_date}}</div>
+            <div>Категория: {{news.category}}</div>
+            <p>{{news.description}}</p>
+        </div>
+        {% endfor %}
+    </body>
+</html>
