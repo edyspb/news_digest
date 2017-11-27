@@ -37,6 +37,6 @@ class DigestView(View):
 class CategoryView(View):
     def get(self, request, *args, **kwargs):
         categories = [{'name': category.name, 'id': category.id}
-                      for category in Category.objects.all()]
+                      for category in Category.objects.all().order_by('name')]
         return HttpResponse(
             json.dumps(categories), content_type='application/json')

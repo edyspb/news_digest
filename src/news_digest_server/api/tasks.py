@@ -55,7 +55,7 @@ def render_to_pdf_and_send(email, date_from, date_to, categories):
     news_list = News.objects.filter(
         category__in=categories,
         pub_date__gte=date_from,
-        pub_date__lte=date_to)
+        pub_date__lte=date_to).order_by('-pub_date')
 
     news_for_context = []
     for news in news_list:
