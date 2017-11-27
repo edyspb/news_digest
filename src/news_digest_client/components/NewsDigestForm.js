@@ -29,10 +29,7 @@ class NewsDigestForm extends React.Component {
         });
 
         const { getFieldDecorator } = this.props.form;
-        const formItemLayout = {
-            labelCol: { span: 8 },
-            wrapperCol: { span: 8 },
-        };
+
         const rangeConfig = {
             rules: [{
                 type: 'array',
